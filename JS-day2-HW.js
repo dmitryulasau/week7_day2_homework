@@ -212,3 +212,6 @@ function persistence(num) {
 
   return count;
 }
+
+console.log(persistence(39)); // -> 3
+console.log(persistence(999)); // -> 4
