@@ -44,6 +44,30 @@ function favoriteFoodDishes(object) {
 
 favoriteFoodDishes(person3);
 
+// ================= Exercise #1 OUTPUT =================
+// pizza:
+//  - Deep Dish
+//  - South Side Thin Crust
+// tacos:
+//  - Anything not from Taco bell
+// burgers:
+//  - Portillos Burgers
+// ice_cream:
+//  - Chocolate
+//  - Vanilla
+//  - Oreo
+// shakes:
+//  - oberwise:
+//   -- Chocolate
+//  - dunkin:
+//   -- Vanilla
+//  - culvers:
+//   -- All of them
+//  - mcDonalds:
+//   -- Sham-rock-shake
+//  - cupids_candies:
+//   -- Chocolate Malt
+
 //=======Exercise #2=========//
 /*
 Write an object prototype for a Person that has a name and age, has a
@@ -79,6 +103,14 @@ monica.addAge();
 monica.addAge();
 monica.addAge();
 console.log(monica.printInfo());
+
+// ================= Exercise #2 OUTPUT=================
+// Person's name: Chandler
+// Person's age: 30
+// Person's name: Monica
+// Person's age: 29
+// Person's name: Monica
+// Person's age: 32
 
 // =============Exercise #3 ============//
 /*
@@ -130,14 +162,18 @@ async function lengthGreat_async(string) {
 lengthGreat_async("Length of this string is greater than 10");
 lengthGreat_async("Short");
 
+// ================= Exercise #3 OUTPUT =================
+// Big word
+// Small Number
+
 // CODEWARS ////////////////////////////////////////////////////////////////////
 
 console.log("================= CODEWARS #1 =================");
 // https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
 
 function findOdd(A) {
-  result = 0;
-  temp = {};
+  let result = 0;
+  let temp = {};
   //   { '1': 2, '2': 2, '3': 2, '4': 2, '5': 3, '20': 2, '-1': 2, '-2': 2 }
 
   for (const number of A) {
@@ -160,3 +196,19 @@ function findOdd(A) {
 console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])); // -> 5
 
 console.log("================= CODEWARS #2 =================");
+// https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/train/javascript
+
+function persistence(num) {
+  let count = 0;
+  let arrayNum = num.toString().split("");
+
+  while (arrayNum.length > 1) {
+    arrayNum = arrayNum
+      .reduce((acc, cur) => acc * cur)
+      .toString()
+      .split("");
+    count++;
+  }
+
+  return count;
+}
